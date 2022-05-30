@@ -1,0 +1,73 @@
+#navbar{
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+    background-color: burlywood;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.images{
+    width: 300px;
+    height: 300px;
+}
+#menu{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    
+}
+
+#menu div{
+    padding: 20px;
+    border: 3px solid burlywood;
+}
+
+/* media for mid screen ipad etc */
+@media only screen and (max-width:780px ) and (min-width: 421px)
+{
+
+    #navbar {
+        width: 100%;
+    }
+    .images{
+        width: 200px;
+        height: 200px;
+    }
+    #menu{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        
+    }
+
+    #menu div{
+        padding: 20px;
+        border: 3px solid burlywood;
+    }
+    
+}
+
+/* media for small screen mobile etc */
+@media only screen and (max-width:420px ) and (min-width: 50px)
+{
+    .images{
+        width: 100px;
+        height: 100px;
+    }
+    #menu{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        
+    }
+
+    #menu div{
+        padding: 20px;
+        border: 3px solid burlywood;
+    }
+    
+}

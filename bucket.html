@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+
+    #bucket{
+      display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    }
+    
+img{
+    width: 300px;
+    height: 300px;
+}
+
+#bucket div{
+    padding: 20px;
+    border: 3px solid burlywood;
+}
+
+#confirm_checkout{
+  background-color: rgb(0, 255, 30);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  color: black;
+  font-weight: bolder;
+  
+}
+
+#confirm_checkout:hover {
+  background-color: gold;
+}
+/* media for mid screen ipad etc */
+@media only screen and (max-width:780px ) and (min-width: 421px)
+{
+
+    #navbar {
+        width: 100%;
+    }
+    img{
+        width: 200px;
+        height: 200px;
+    }
+    #bucket{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        
+    }
+
+    #bucket div{
+        padding: 20px;
+        border: 3px solid burlywood;
+    }
+    
+}
+
+/* media for small screen mobile etc */
+@media only screen and (max-width:420px ) and (min-width: 50px)
+{
+    img{
+        width: 100px;
+        height: 100px;
+    }
+    #bucket{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        
+    }
+
+    #bucket div{
+        padding: 20px;
+        border: 3px solid burlywood;
+    }
+    
+}
+  </style>
+
+  <body>
+    <div id="total-div">
+      <h3 id="total_amount">
+        <!--Show bucket total here, do not add anything only Total value. Not even "Total - 1200Rs" but like this "1200" -->
+      </h3>
+    </div>
+    <div id="bucket">
+      <!--Show all coffee added to bucket here-->
+      <!-- add an remove button to each coffee so that you can remove that item from bucket, give the button HTML id as 'remove_coffee' -->
+    </div>
+
+    <!-- checkout link  -->
+    <button id="confirm_checkout"><a href="checkout.html">Checkout</a></button>
+  </body>
+</html>
+
+<script src="./scripts/bucket.js"></script>
